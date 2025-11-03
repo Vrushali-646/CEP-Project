@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(120deg, #a8edea, #fed6e3);
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #00796b;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+   margin-bottom: 10px;
+  color: #ffffff; /* white text for contrast */
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  margin: 8px 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #004d40;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: url('https://images.unsplash.com/photo-1571019613914-85f342c1d4b1?auto=format&fit=crop&w=1000&q=80')
+    center/cover no-repeat;
+  color: white;
+}
+
+.hero h2 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #00796b;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #004d40;
+}
+
+/* About Section */
+.about {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: white;
+}
+
+.about h2 {
+  color: #00796b;
+  margin-bottom: 15px;
+}
+
+/* Features Section */
+.features {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.features h2 {
+  color: #00796b;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: white;
+  width: 250px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background-color: #00796b;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+
+
+
+
+
+/* ===== Environment Page Layout Fix ===== */
+/* ===== Environment Page Layout Fix (Grid Version) ===== */
+/* ===== Environment Page Layout (Wide Grid) ===== */
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  margin: 50px auto;
+  padding: 0 60px;
+  flex-wrap: nowrap; /* keeps all in one line */
+}
+
+.card {
+  flex: 1;
+  max-width: 400px; /* adjust this width as you like */
+  background: #ffffffcc;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  transition: all 0.3s ease;
+  text-align: center;
+  backdrop-filter: blur(6px);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 128, 0, 0.3);
+}
+
+
+.card img {
+  width: 90px;
+  height: 90px;
+  display: block;
+  margin: 0 auto 20px auto; /* centers image and adds space below */
+}
+
+.card h2 {
+  color: #036666;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.card ul {
+  margin-left: 20px;
+  line-height: 1.8;
+}
+
+.card p {
+  line-height: 1.8;
+  text-align: justify;
+}
+h1 {
+  text-align: center;
+  color: #2e7d32;
+  font-size: 2.5rem;
+  margin-top: 30px;
+  margin-bottom: 40px;  /* increased gap below title */
+  font-weight: 700;
+}
+
+
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+@media (max-width: 1024px) {
+  .cards {
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 30px;
+  }
+
+  .card {
+    max-width: 320px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 0 20px;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero h2 {
+    font-size: 1.4rem;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .card {
+    padding: 15px;
+  }
+}
